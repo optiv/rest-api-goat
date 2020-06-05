@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "10af27c6-4f86-4f76-adbd-71484e2fec26",
+		"name": "REST API Goat",
+		"description": "Test cases for the REST API Goat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"api_token\": \"vfuzd2nvaweojqolm4kq\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get_customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer v1 (ID)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get_customer_v1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_customer_v1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer v2 (ID)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get_customer_v2/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_customer_v2",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transfer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\": 5,\n\t\"to\": 3,\n\t\"ammount\": \"500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transfers (All)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get_transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transfers (Created)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get_transfers/CREATED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_transfers",
+						"CREATED"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Process Transfers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/process_transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"process_transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/confirm_transfer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"confirm_transfer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Access Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/new_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"new_token"
+					]
+				},
+				"description": "This is used by banks when they want to add a new API token for a client to use."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Token",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-Token",
+						"value": "vfuzd2nvaweojqolm4kq",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/token/jyrvm14k9tvdiesxwgku",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"token",
+						"jyrvm14k9tvdiesxwgku"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
