@@ -2,8 +2,8 @@
 
 This is a "Goat" project so you can get familiar with REST API testing. 
 There is an included Postman project so you can see how everything is meant
-to be called. This is very much still a work in progress, so feel free to
-hit me up with any questions you might have. steven.hartz@optiv.com
+to be called. If you encounter any components of the API which don't work
+correctly, please create an Issue for them. 
 
 ## How To:
 Make sure you can run `pipenv`. On Macs, this easily is installed once homebrew
